@@ -7,3 +7,27 @@ body {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.carousel {
+	@apply max-w-[1070px] h-[100vh] max-h-[360px] relative;
+}
+
+.carousel-button {
+	@apply absolute z-[2] bg-none border-none text-5xl cursor-pointer top-[45%];
+}
+
+.carousel-button.prev {
+	left: 1rem;
+}
+
+.carousel-button.next {
+	right: 1rem;
+}
+
+.slide {
+	@apply absolute inset-0 opacity-0;
+}
+
+.slide[data-active] {
+	@apply opacity-100;
+}

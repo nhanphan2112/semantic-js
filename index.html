@@ -13,8 +13,9 @@
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
 		/>
 		<title>Index - GrenX Inc</title>
+		<script defer src="./index.js"></script>
 	</head>
-	<body class="flex flex-col items-center root">
+	<body class="m-0 flex flex-col items-center root bg-[#f5f4ef]">
 		<!-- <div class=""> -->
 		<header class="bg-[#00713d] text-white w-full">
 			<nav class="w-[88%] pt-4 flex m-auto justify-between">
@@ -34,12 +35,40 @@
 				<li>
 					<a class="block px-5 py-3 hover:bg-primaryColor text-textLightColor" href="shop">SHOP</a>
 				</li>
-				<li>
-					<a
-						class="block px-5 py-3 hover:bg-primaryColor text-textLightColor"
-						href="science-of-green-tea"
-						>SCIENCE OF GREEN TEA</a
+				<li class="group inline-block px-5 py-3 relative">
+					<button class="">SCIENCE OF GREEN TEA</button>
+					<ul
+						class="absolute hidden bg-white text-gray-700 mt-3 text-sm group-hover:block group-hover:z-10"
 					>
+						<li class="">
+							<a class="hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#"
+								>View All Health Benefits</a
+							>
+						</li>
+						<li class="">
+							<a class="hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#"
+								>Why Drink Green Tea?</a
+							>
+						</li>
+						<li class="">
+							<a class="hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#"
+								>GreenTeaHP University</a
+							>
+						</li>
+						<li class="">
+							<a class="hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#"
+								>Seven Day Challenge</a
+							>
+						</li>
+						<li class="">
+							<a class="hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#"
+								>Fast Facts</a
+							>
+						</li>
+						<li class="">
+							<a class="hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">FAQ's</a>
+						</li>
+					</ul>
 				</li>
 				<li>
 					<a class="block px-5 py-3 hover:bg-primaryColor text-textLightColor" href="join">JOIN</a>
@@ -58,10 +87,34 @@
 		</nav>
 
 		<main class="w-[88%] font-[550]">
-			<h1>CHANGE THE WAY <br />YOU LOOK, FEEL, AND AGE</h1>
-			<p>Increase engergy, look refreshed and feel rejuvenated*.</p>
-			<button>TAKE THE 7-DAY CHALLENGE</button>
-			<img class="" src="./photos/banner01.png" alt="change the way you look, feel, and age" />
+			<section aria-label="">
+				<!-- <h1>CHANGE THE WAY <br />YOU LOOK, FEEL, AND AGE</h1>
+				<p>Increase engergy, look refreshed and feel rejuvenated*.</p>
+				<button>TAKE THE 7-DAY CHALLENGE</button> -->
+				<div class="carousel" data-carousel>
+					<button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
+					<button class="carousel-button next" data-carousel-button="next">&#8658;</button>
+					<ul data-slides>
+						<li class="slide" data-active>
+							<img
+								class=""
+								src="./photos/banner01.png"
+								alt="change the way you look, feel, and age"
+							/>
+						</li>
+						<li class="slide">
+							<img
+								class=""
+								src="https://via.placeholder.com/1070x360"
+								alt="change the way you look, feel, and age"
+							/>
+						</li>
+						<li class="slide max-w-[1070px] max-h-[360px]">
+							<img class="" src="/photos/birds.png" alt="change the way you look, feel, and age" />
+						</li>
+					</ul>
+				</div>
+			</section>
 
 			<section class="mb-5 grid grid-flow-col grid-rows-1">
 				<span><img src="./photos/flavors.png" alt="flavors" /><button>SHOP NOW</button></span>
@@ -69,8 +122,8 @@
 				<span><img src="./photos/visit.png" alt="visit" /><button>VISIT US</button></span>
 			</section>
 
-			<article class="grid grid-cols-3 py-4 mb-5 rounded-md bg-textLightColor">
-				<header class="col-span-2">
+			<article class="grid grid-cols-4 py-4 mb-5 rounded-md bg-textLightColor">
+				<header class="col-span-3">
 					<h2 class="text-2xl text-primaryColor">GREEN TEA</h2>
 					<h3 class="text-[1.17em] pb-[10px]">THE ONE. THE ONLY. GREEN TEA HP™</h3>
 					<p>A LOVE STORY</p>
@@ -84,6 +137,7 @@
 					</p>
 					<button>LEARN MORE ></button>
 				</header>
+				<!-- TODO: this image is responsive, it gets bigger when screen size reduce -->
 				<img
 					class=""
 					src="/photos/love_story_pixie pouring_1.png"
