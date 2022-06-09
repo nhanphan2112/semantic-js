@@ -17,3 +17,31 @@ buttons.forEach((button) => {
 		delete activeSlide.dataset.active;
 	});
 });
+
+document.querySelectorAll(".carouseel").forEach((carouseel) => {
+	const items = carouseel.querySelectorAll(".carouseel__item");
+	const buttonsHtml = Array.from(items, () => {
+		return `<button class="carouseel__button"></button>`;
+	});
+
+	carouseel.insertAdjacentHTML(
+		"beforeend",
+		`<span class="carouseel__nav">
+	    ${buttonsHtml.join(" ")}
+	  </span>
+    `
+	);
+
+	const buttons = carouseel.querySelectorAll(".carouseel__button");
+
+	buttons.forEach((button, i) => {
+		button.addEventListener("click", () => {
+			//un-select all the items
+			items.forEach((item) => item.classList.remove("carouseel__item--selected"));
+			buttons.forEach((button) => button.classList.remove("carouseel__button--selected"));
+
+			items[i].classList.add("carouseel__item--selected");
+			button.classList.add("carouseel__button--selected");
+		});
+	});
+});

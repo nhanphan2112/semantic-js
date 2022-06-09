@@ -31,3 +31,33 @@ body {
 .slide[data-active] {
 	@apply opacity-100;
 }
+
+.carouseel {
+	@apply relative max-w-[1070px] max-h-[360px];
+}
+
+.carouseel__item {
+	@apply h-[360px] hidden;
+}
+
+.carouseel__item--selected {
+	@apply block;
+}
+
+.carouseel__nav {
+	@apply w-full py-5 px-0 absolute bottom-0 left-0 text-center;
+}
+
+.carouseel__button {
+	width: 10px;
+	height: 10px;
+	display: inline-block;
+	background: red;
+	border-radius: 50%;
+	margin: 0 5px;
+	cursor: pointer;
+}
+
+.carouseel__button--selected {
+	background: blue;
+}

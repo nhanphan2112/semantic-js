@@ -481,10 +481,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   position: relative;
 }
 
-.z-10{
-  z-index: 10;
-}
-
 .col-span-3{
   grid-column: span 3 / span 3;
 }
@@ -537,14 +533,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 50px;
 }
 
-.h-\[\]{
-  height: ;
-}
-
-.h-\[360px\]{
-  height: 360px;
-}
-
 .max-h-\[360px\]{
   max-height: 360px;
 }
@@ -575,10 +563,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-\[50px\]{
   width: 50px;
-}
-
-.w-\[1070px\]{
-  width: 1070px;
 }
 
 .max-w-\[1070px\]{
@@ -647,16 +631,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .rounded{
   border-radius: 0.25rem;
-}
-
-.rounded-t{
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
-}
-
-.rounded-b{
-  border-bottom-right-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
 }
 
 .border-b-\[1px\]{
@@ -733,6 +707,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 0.5rem;
 }
 
+.text-sm{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 .text-2xl{
   font-size: 1.5rem;
   line-height: 2rem;
@@ -744,11 +723,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .text-\[small\]{
   font-size: small;
-}
-
-.text-sm{
-  font-size: 0.875rem;
-  line-height: 1.25rem;
 }
 
 .font-\[550\]{
@@ -819,6 +793,47 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .slide[data-active]{
   opacity: 1;
+}
+
+.carouseel{
+  position: relative;
+  max-height: 360px;
+  max-width: 1070px;
+}
+
+.carouseel__item{
+  display: none;
+  height: 360px;
+}
+
+.carouseel__item--selected{
+  display: block;
+}
+
+.carouseel__nav{
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  padding-left: 0px;
+  padding-right: 0px;
+  text-align: center;
+}
+
+.carouseel__button {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background: red;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.carouseel__button--selected {
+  background: blue;
 }
 
 .hover\:bg-gray-400:hover{
