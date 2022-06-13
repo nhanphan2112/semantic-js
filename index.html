@@ -37,46 +37,40 @@
 				</li>
 				<li class="group inline-block px-5 py-3 relative">
 					<button class="">SCIENCE OF GREEN TEA</button>
-					<ul
-						class="absolute hidden bg-white text-gray-700 mt-3 text-sm group-hover:block group-hover:z-10"
-					>
+					<ul class="dropdown">
 						<li class="">
-							<a class="hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#"
-								>View All Health Benefits</a
-							>
+							<a class="dropdown__item" href="#">View All Health Benefits</a>
 						</li>
 						<li class="">
-							<a class="hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#"
-								>Why Drink Green Tea?</a
-							>
+							<a class="dropdown__item" href="#">Why Drink Green Tea?</a>
 						</li>
 						<li class="">
-							<a class="hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#"
-								>GreenTeaHP University</a
-							>
+							<a class="dropdown__item" href="#">GreenTeaHP University</a>
 						</li>
 						<li class="">
-							<a class="hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#"
-								>Seven Day Challenge</a
-							>
+							<a class="dropdown__item" href="#">Seven Day Challenge</a>
 						</li>
 						<li class="">
-							<a class="hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#"
-								>Fast Facts</a
-							>
+							<a class="dropdown__item" href="#">Fast Facts</a>
 						</li>
 						<li class="">
-							<a class="hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">FAQ's</a>
+							<a class="dropdown__item whitespace-no-wrap" href="#">FAQ's</a>
 						</li>
 					</ul>
 				</li>
 				<li>
 					<a class="block px-5 py-3 hover:bg-primaryColor text-textLightColor" href="join">JOIN</a>
 				</li>
-				<li>
-					<a class="block px-5 py-3 hover:bg-primaryColor text-textLightColor" href="mall-location"
-						>MALL LOCATIONS</a
-					>
+				<li class="group inline-block px-5 py-3 relative">
+					<button class="">MALL LOCATIONS</button>
+					<ul class="dropdown">
+						<li class="">
+							<a class="dropdown__item whitespace-nowrap" href="#">View All Health Benefits</a>
+						</li>
+						<li class="">
+							<a class="dropdown__item whitespace-nowrap" href="#">Why Drink Green Tea?</a>
+						</li>
+					</ul>
 				</li>
 				<li>
 					<a class="block px-5 py-3 hover:bg-primaryColor text-textLightColor" href="68-million"
@@ -87,42 +81,50 @@
 		</nav>
 
 		<main class="w-[88%] font-[550]">
-			<section aria-label="">
-				<!-- <h1>CHANGE THE WAY <br />YOU LOOK, FEEL, AND AGE</h1>
-				<p>Increase engergy, look refreshed and feel rejuvenated*.</p>
-				<button>TAKE THE 7-DAY CHALLENGE</button> -->
-				<div class="carouseel">
-					<ul>
-						<li class="carouseel__item carouseel__item--selected">
+			<section class="carouseel">
+				<ul>
+					<li class="carouseel__item carouseel__item--selected">
+						<figure>
 							<img
 								class=""
 								src="./photos/banner01.png"
 								alt="change the way you look, feel, and age"
 							/>
-						</li>
-						<li class="carouseel__item">
-							<img
-								class=""
-								src="https://via.placeholder.com/1070x360"
-								alt="change the way you look, feel, and age"
-							/>
-						</li>
-						<li class="carouseel__item">
-							<img class="" src="/photos/birds.png" alt="change the way you look, feel, and age" />
-						</li>
-					</ul>
-					<!-- <span class="carouseel__nav">
+							<figcaption class="absolute top-10 left-10 font-['Open_Sans_Light'] font-normal">
+								<h1 class="text-4xl text-[#00713d] pb-3">CHANGE THE WAY</h1>
+								<h1 class="text-4xl text-[#45aa42] pb-2">YOU LOOK, FEEL, AND AGE.</h1>
+								<p class="text-xl text-gray-500">
+									Increase engergy, look refreshed and feel rejuvenated*.
+								</p>
+							</figcaption>
+							<button class="absolute bottom-10 left-10 bg-[#45aa42] text-white text-small p-2">
+								TAKE THE 7-DAY CHALLENGE
+								<i class="fa fa-chevron-right fa-md" aria-hidden="true"></i>
+							</button>
+						</figure>
+					</li>
+					<li class="carouseel__item">
+						<img
+							class=""
+							src="https://via.placeholder.com/1070x360"
+							alt="change the way you look, feel, and age"
+						/>
+					</li>
+					<li class="carouseel__item">
+						<img class="" src="/photos/birds.png" alt="change the way you look, feel, and age" />
+					</li>
+				</ul>
+				<!-- <span class="carouseel__nav">
 						<button class="carouseel__button carouseel__button--selected"></button>
 						<button class="carouseel__button"></button>
 						<button class="carouseel__button"></button>
 					</span> -->
-				</div>
 			</section>
 
-			<section aria-label="">
-				<!-- <h1>CHANGE THE WAY <br />YOU LOOK, FEEL, AND AGE</h1>
+			<!-- <section aria-label="">
+				<h1>CHANGE THE WAY <br />YOU LOOK, FEEL, AND AGE</h1>
 				<p>Increase engergy, look refreshed and feel rejuvenated*.</p>
-				<button>TAKE THE 7-DAY CHALLENGE</button> -->
+				<button>TAKE THE 7-DAY CHALLENGE</button>
 				<div class="carousel" data-carousel>
 					<button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
 					<button class="carousel-button next" data-carousel-button="next">&#8658;</button>
@@ -146,7 +148,7 @@
 						</li>
 					</ul>
 				</div>
-			</section>
+			</section> -->
 
 			<section class="mb-5 grid grid-flow-col grid-rows-1">
 				<span><img src="./photos/flavors.png" alt="flavors" /><button>SHOP NOW</button></span>

@@ -1,4 +1,4 @@
-// alert("This alert box was called with the onload event");
+// carousel by next and previous buttons
 const buttons = document.querySelectorAll("[data-carousel-button]");
 console.log("buttons: ", buttons);
 
@@ -18,6 +18,7 @@ buttons.forEach((button) => {
 	});
 });
 
+// carousel by indicator
 document.querySelectorAll(".carouseel").forEach((carouseel) => {
 	const items = carouseel.querySelectorAll(".carouseel__item");
 	const buttonsHtml = Array.from(items, () => {
