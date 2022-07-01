@@ -30,13 +30,13 @@
 			</nav>
 		</header>
 
-		<nav class="w-full bg-[#45aa42] text-white mb-5">
+		<nav class="w-full bg-[#45aa42] text-white mb-5 topnav" id="myTopnav">
 			<ul class="w-[88%] flex flex-wrap justify-end m-auto rounded-md bg-textDarkColor">
 				<li>
-					<a class="block px-5 py-3 hover:bg-primaryColor text-textLightColor" href="shop">SHOP</a>
+					<a class="block px-5 py-3 hover:bg-primaryColor text-textLightColor" href="#shop">SHOP</a>
 				</li>
 				<li class="group inline-block px-5 py-3 relative">
-					<button class="">SCIENCE OF GREEN TEA</button>
+					<button class="" href="#scienceOfGreenTea">SCIENCE OF GREEN TEA</button>
 					<ul class="dropdown">
 						<li class="">
 							<a class="dropdown__item" href="#">View All Health Benefits</a>
@@ -59,10 +59,10 @@
 					</ul>
 				</li>
 				<li>
-					<a class="block px-5 py-3 hover:bg-primaryColor text-textLightColor" href="join">JOIN</a>
+					<a class="block px-5 py-3 hover:bg-primaryColor text-textLightColor" href="#join">JOIN</a>
 				</li>
 				<li class="group inline-block px-5 py-3 relative">
-					<button class="">MALL LOCATIONS</button>
+					<button class="" href="#mallLocation">MALL LOCATIONS</button>
 					<ul class="dropdown">
 						<li class="">
 							<a class="dropdown__item whitespace-nowrap" href="#">View All Health Benefits</a>
@@ -73,9 +73,14 @@
 					</ul>
 				</li>
 				<li>
-					<a class="block px-5 py-3 hover:bg-primaryColor text-textLightColor" href="68-million"
+					<a class="block px-5 py-3 hover:bg-primaryColor text-textLightColor" href="#68-million"
 						>68 MILLION</a
 					>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+						<i class="fa fa-bars"></i>
+					</a>
 				</li>
 			</ul>
 		</nav>
