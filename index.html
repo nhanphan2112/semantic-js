@@ -1,132 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="description" content="GrenX Inc" />
-		<meta name="keywords" content="Greentea, Science, Health" />
-		<meta name="author" content="Nhan Phan" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" href="/photos/favicon.ico" />
-		<link href="./app.css" rel="stylesheet" />
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-		/>
-		<title>Index - GrenX Inc</title>
-		<script defer src="./index.js"></script>
-	</head>
-	<body class="m-0 flex flex-col items-center root bg-[#f5f4ef]">
-		<!-- <div class=""> -->
-		<header class="bg-[#00713d] text-white w-full">
-			<nav class="w-[88%] pt-4 flex m-auto justify-between">
-				<img src="/photos/logo.png" alt="Green tea HP logo" />
-				<address class="not-italic">Contact Us</address>
-				<button class="">
-					<a href="#" class="fa fa-youtube-play fa-lg"></a>
-					<a href="#" class="fa fa-twitter fa-lg"></a>
-					<a href="#" class="fa fa-facebook fa-lg"></a>
-					<a href="#" class="fa fa-shopping-cart fa-lg"></a>
-				</button>
-			</nav>
-		</header>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="GrenX Inc" />
+    <meta name="keywords" content="Greentea, Science, Health" />
+    <meta name="author" content="Nhan Phan" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/photos/favicon.ico" />
+    <link href="./app.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Index - GrenX Inc</title>
+    <script defer src="./index.js"></script>
+  </head>
+  <body class="m-0 flex flex-col items-center root bg-[#f5f4ef]">
+    <header class="bg-[#00713d] text-white w-full">
+      <nav class="w-[88%] pt-4 flex m-auto justify-between">
+        <img src="/photos/logo.png" alt="Green tea HP logo" />
+        <address class="not-italic">Contact Us</address>
+        <button class="">
+          <a href="#" class="fa fa-youtube-play fa-lg"></a>
+          <a href="#" class="fa fa-twitter fa-lg"></a>
+          <a href="#" class="fa fa-facebook fa-lg"></a>
+          <a href="#" class="fa fa-shopping-cart fa-lg"></a>
+        </button>
+      </nav>
+    </header>
 
-		<nav class="w-full bg-[#45aa42] text-white mb-5 topnav" id="myTopnav">
-			<ul class="w-[88%] flex flex-wrap justify-end m-auto rounded-md bg-textDarkColor">
-				<li>
-					<a class="block px-5 py-3 hover:bg-primaryColor text-textLightColor" href="#shop">SHOP</a>
-				</li>
-				<li class="group inline-block px-5 py-3 relative">
-					<button class="" href="#scienceOfGreenTea">SCIENCE OF GREEN TEA</button>
-					<ul class="dropdown">
-						<li class="">
-							<a class="dropdown__item" href="#">View All Health Benefits</a>
-						</li>
-						<li class="">
-							<a class="dropdown__item" href="#">Why Drink Green Tea?</a>
-						</li>
-						<li class="">
-							<a class="dropdown__item" href="#">GreenTeaHP University</a>
-						</li>
-						<li class="">
-							<a class="dropdown__item" href="#">Seven Day Challenge</a>
-						</li>
-						<li class="">
-							<a class="dropdown__item" href="#">Fast Facts</a>
-						</li>
-						<li class="">
-							<a class="dropdown__item whitespace-no-wrap" href="#">FAQ's</a>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<a class="block px-5 py-3 hover:bg-primaryColor text-textLightColor" href="#join">JOIN</a>
-				</li>
-				<li class="group inline-block px-5 py-3 relative">
-					<button class="" href="#mallLocation">MALL LOCATIONS</button>
-					<ul class="dropdown">
-						<li class="">
-							<a class="dropdown__item whitespace-nowrap" href="#">View All Health Benefits</a>
-						</li>
-						<li class="">
-							<a class="dropdown__item whitespace-nowrap" href="#">Why Drink Green Tea?</a>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<a class="block px-5 py-3 hover:bg-primaryColor text-textLightColor" href="#68-million"
-						>68 MILLION</a
-					>
-				</li>
-				<li>
-					<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-						<i class="fa fa-bars"></i>
-					</a>
-				</li>
-			</ul>
-		</nav>
+    <nav class="topnav" id="myTopnav">
+      <button class="" onclick="myFunction()">
+        <a href="javascript:void(0);" class="icon">
+          <i class="fa fa-bars"></i>
+        </a>
+      </button>
+      <ul class="topnav__options">
+        <li class="option">
+          <a href="#shop">SHOP</a>
+        </li>
+        <li class="group option-with-dropdown">
+          <!-- TODO focus is better than hover -->
+          <!-- TODO what is the best semantic button, span? -->
+          <button class="" href="#scienceOfGreenTea">
+            SCIENCE OF GREEN TEA
+          </button>
+          <ul class="dropdown">
+            <li class="">
+              <a class="dropdown__item" href="#">View All Health Benefits</a>
+            </li>
+            <li class="">
+              <a class="dropdown__item" href="#">Why Drink Green Tea?</a>
+            </li>
+            <li class="">
+              <a class="dropdown__item" href="#">GreenTeaHP University</a>
+            </li>
+            <li class="">
+              <a class="dropdown__item" href="#">Seven Day Challenge</a>
+            </li>
+            <li class="">
+              <a class="dropdown__item" href="#">Fast Facts</a>
+            </li>
+            <li class="">
+              <a class="dropdown__item whitespace-no-wrap" href="#">FAQ's</a>
+            </li>
+          </ul>
+        </li>
+        <li class="option">
+          <a href="#join">JOIN</a>
+        </li>
+        <li class="group option-with-dropdown">
+          <button class="" href="#mallLocation">MALL LOCATIONS</button>
+          <ul class="dropdown">
+            <li class="">
+              <a class="dropdown__item whitespace-nowrap" href="#"
+                >View All Health Benefits</a
+              >
+            </li>
+            <li class="">
+              <a class="dropdown__item whitespace-nowrap" href="#"
+                >Why Drink Green Tea?</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="option">
+          <a href="#68-million">68 MILLION</a>
+        </li>
+      </ul>
+    </nav>
 
-		<main class="w-[88%] font-[550]">
-			<section class="carouseel">
-				<ul>
-					<li class="carouseel__item carouseel__item--selected">
-						<figure>
-							<img
-								class=""
-								src="./photos/banner01.png"
-								alt="change the way you look, feel, and age"
-							/>
-							<figcaption class="absolute top-10 left-10 font-['Open_Sans_Light'] font-normal">
-								<h1 class="text-4xl text-[#00713d] pb-3">CHANGE THE WAY</h1>
-								<h1 class="text-4xl text-[#45aa42] pb-2">YOU LOOK, FEEL, AND AGE.</h1>
-								<p class="text-xl text-gray-500">
-									Increase engergy, look refreshed and feel rejuvenated*.
-								</p>
-							</figcaption>
-							<button class="absolute bottom-10 left-10 bg-[#45aa42] text-white text-small p-2">
-								TAKE THE 7-DAY CHALLENGE
-								<i class="fa fa-chevron-right fa-md" aria-hidden="true"></i>
-							</button>
-						</figure>
-					</li>
-					<li class="carouseel__item">
-						<img
-							class=""
-							src="https://via.placeholder.com/1070x360"
-							alt="change the way you look, feel, and age"
-						/>
-					</li>
-					<li class="carouseel__item">
-						<img class="" src="/photos/birds.png" alt="change the way you look, feel, and age" />
-					</li>
-				</ul>
-				<!-- <span class="carouseel__nav">
-						<button class="carouseel__button carouseel__button--selected"></button>
-						<button class="carouseel__button"></button>
-						<button class="carouseel__button"></button>
-					</span> -->
-			</section>
+    <!-- BELOW IS A FUNCTIONAL nav bar without hamburber -->
+    <!-- <nav class="w-full bg-[#45aa42] text-white mb-5" id="">
+      <ul
+        class="w-[88%] flex flex-wrap justify-end m-auto rounded-md bg-textDarkColor"
+      >
+        <li>
+          <a
+            class="block px-5 py-3 hover:bg-primaryColor text-textLightColor"
+            href="#"
+            >SHOP</a
+          >
+        </li>
+        <li class="group inline-block px-5 py-3 relative">
+          <span class=""> SCIENCE OF GREEN TEA </span>
+          <ul class="dropdown">
+            <li class="">
+              <a class="dropdown__item" href="#">View All Health Benefits</a>
+            </li>
+            <li class="">
+              <a class="dropdown__item" href="#">Why Drink Green Tea?</a>
+            </li>
+            <li class="">
+              <a class="dropdown__item" href="#">GreenTeaHP University</a>
+            </li>
+            <li class="">
+              <a class="dropdown__item" href="#">Seven Day Challenge</a>
+            </li>
+            <li class="">
+              <a class="dropdown__item" href="#">Fast Facts</a>
+            </li>
+            <li class="">
+              <a class="dropdown__item whitespace-no-wrap" href="#">FAQ's</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a
+            class="block px-5 py-3 hover:bg-primaryColor text-textLightColor"
+            href="#join"
+            >JOIN</a
+          >
+        </li>
+        <li class="group inline-block px-5 py-3 relative">
+          <button class="" href="#">MALL LOCATIONS</button>
+          <ul class="dropdown">
+            <li class="">
+              <a class="dropdown__item whitespace-nowrap" href="#"
+                >View All Health Benefits</a
+              >
+            </li>
+            <li class="">
+              <a class="dropdown__item whitespace-nowrap" href="#"
+                >Why Drink Green Tea?</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a
+            class="block px-5 py-3 hover:bg-primaryColor text-textLightColor"
+            href="#68-million"
+            >68 MILLION</a
+          >
+        </li>
+      </ul>
+    </nav> -->
 
-			<!-- <section aria-label="">
+    <main class="w-[88%] font-[550]">
+      <section class="carouseel">
+        <ul>
+          <li class="carouseel__item carouseel__item--selected">
+            <figure>
+              <img
+                class=""
+                src="./photos/banner01.png"
+                alt="change the way you look, feel, and age"
+              />
+              <figcaption
+                class="absolute top-10 left-10 font-['Open_Sans_Light'] font-normal"
+              >
+                <h1 class="text-4xl text-[#00713d] pb-3">CHANGE THE WAY</h1>
+                <h1 class="text-4xl text-[#45aa42] pb-2">
+                  YOU LOOK, FEEL, AND AGE.
+                </h1>
+                <p class="text-xl text-gray-500">
+                  Increase engergy, look refreshed and feel rejuvenated*.
+                </p>
+              </figcaption>
+              <button
+                class="absolute bottom-10 left-10 bg-[#45aa42] text-white text-small p-2"
+              >
+                TAKE THE 7-DAY CHALLENGE
+                <i class="fa fa-chevron-right fa-md" aria-hidden="true"></i>
+              </button>
+            </figure>
+          </li>
+          <li class="carouseel__item">
+            <img
+              class=""
+              src="https://via.placeholder.com/1070x360"
+              alt="change the way you look, feel, and age"
+            />
+          </li>
+          <li class="carouseel__item">
+            <img
+              class=""
+              src="/photos/birds.png"
+              alt="change the way you look, feel, and age"
+            />
+          </li>
+        </ul>
+      </section>
+
+      <!-- BELOW IS A FUNCTIONAL carousel with next and previous buttons -->
+      <!-- <section aria-label="">
 				<h1>CHANGE THE WAY <br />YOU LOOK, FEEL, AND AGE</h1>
 				<p>Increase engergy, look refreshed and feel rejuvenated*.</p>
 				<button>TAKE THE 7-DAY CHALLENGE</button>
@@ -155,239 +233,256 @@
 				</div>
 			</section> -->
 
-			<section class="mb-5 grid grid-flow-col grid-rows-1">
-				<span><img src="./photos/flavors.png" alt="flavors" /><button>SHOP NOW</button></span>
-				<span><img src="./photos/health.png" alt="health" /><button>LEARN MORE</button></span>
-				<span><img src="./photos/visit.png" alt="visit" /><button>VISIT US</button></span>
-			</section>
+      <section class="mb-5 grid grid-flow-col grid-rows-1">
+        <span
+          ><img src="./photos/flavors.png" alt="flavors" /><button>
+            SHOP NOW
+          </button></span
+        >
+        <span
+          ><img src="./photos/health.png" alt="health" /><button>
+            LEARN MORE
+          </button></span
+        >
+        <span
+          ><img src="./photos/visit.png" alt="visit" /><button>
+            VISIT US
+          </button></span
+        >
+      </section>
 
-			<article class="grid grid-cols-4 py-4 mb-5 rounded-md bg-textLightColor">
-				<header class="col-span-3">
-					<h2 class="text-2xl text-primaryColor">GREEN TEA</h2>
-					<h3 class="text-[1.17em] pb-[10px]">THE ONE. THE ONLY. GREEN TEA HP™</h3>
-					<p>A LOVE STORY</p>
-					<p class="text-[small] leading-[15px]">
-						Formulated with a proprietary blend of pure and highly concentrated EGCG*-rich green tea
-						extract, key nutrients, trace minerals, and an anti-aging antioxidant blend, Green Tea
-						HP™ is simply the most effective and sustainable way to change the way you look and
-						feel, today--and tomorrow. But the number of superior ingredients, fabulous flavors,
-						calories (but who's counting?), and immediate and cumulative benefits (way more than we
-						can fit on our homepage, so explore our site!) only tell half the story.
-					</p>
-					<button>LEARN MORE ></button>
-				</header>
-				<!-- TODO: this image is responsive, it gets bigger when screen size reduce -->
-				<img
-					class=""
-					src="/photos/love_story_pixie pouring_1.png"
-					alt="love_story_pixie pouring_1 image"
-				/>
-			</article>
-		</main>
+      <article class="grid grid-cols-4 py-4 mb-5 rounded-md bg-textLightColor">
+        <header class="col-span-3">
+          <h2 class="text-2xl text-primaryColor">GREEN TEA</h2>
+          <h3 class="text-[1.17em] pb-[10px]">
+            THE ONE. THE ONLY. GREEN TEA HP™
+          </h3>
+          <p>A LOVE STORY</p>
+          <p class="text-[small] leading-[15px]" id="join">
+            Formulated with a proprietary blend of pure and highly concentrated
+            EGCG*-rich green tea extract, key nutrients, trace minerals, and an
+            anti-aging antioxidant blend, Green Tea HP™ is simply the most
+            effective and sustainable way to change the way you look and feel,
+            today--and tomorrow. But the number of superior ingredients,
+            fabulous flavors, calories (but who's counting?), and immediate and
+            cumulative benefits (way more than we can fit on our homepage, so
+            explore our site!) only tell half the story.
+          </p>
+          <button>LEARN MORE ></button>
+        </header>
+        <!-- TODO: this image is responsive, it gets bigger when screen size reduce -->
+        <img
+          class=""
+          src="/photos/love_story_pixie pouring_1.png"
+          alt="love_story_pixie pouring_1 image"
+        />
+      </article>
+    </main>
 
-		<footer class="w-4/5 font-[550]">
-			<section class="flex mb-5">
-				<aside class="w-5/6">
-					<h2 class="text-2xl text-primaryColor">1 of 4 columns</h2>
-					<ul class="grid grid-flow-col grid-rows-6">
-						<li
-							class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
-						>
-							HTML5 Doctor
-						</li>
-						<li
-							class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
-						>
-							W3C
-						</li>
-						<li
-							class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
-						>
-							HTML5 Doctor
-						</li>
-						<li
-							class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
-						>
-							W3C
-						</li>
-						<li
-							class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
-						>
-							HTML5 Doctor
-						</li>
-						<li
-							class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
-						>
-							W3C
-						</li>
-						<li
-							class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
-						>
-							HTML5 Spec (working draft)
-						</li>
-						<li
-							class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
-						>
-							wordpress
-						</li>
-						<li
-							class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
-						>
-							HTML5 Spec (working draft)
-						</li>
-						<li
-							class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
-						>
-							wordpress
-						</li>
-						<li
-							class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
-						>
-							HTML5 Spec (working draft)
-						</li>
-						<li
-							class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
-						>
-							wordpress
-						</li>
-						<li
-							class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
-						>
-							Coding Online
-						</li>
-						<li
-							class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
-						>
-							Wikipedia
-						</li>
-						<li
-							class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
-						>
-							Coding Online
-						</li>
-						<li
-							class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
-						>
-							Wikipedia
-						</li>
-						<li
-							class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
-						>
-							Coding Online
-						</li>
-						<li
-							class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
-						>
-							Wikipedia
-						</li>
-					</ul>
-				</aside>
+    <footer class="w-4/5 font-[550]">
+      <section class="flex mb-5">
+        <aside class="w-5/6">
+          <h2 class="text-2xl text-primaryColor">1 of 4 columns</h2>
+          <ul class="grid grid-flow-col grid-rows-6">
+            <li
+              class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
+            >
+              HTML5 Doctor
+            </li>
+            <li
+              class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
+            >
+              W3C
+            </li>
+            <li
+              class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
+            >
+              HTML5 Doctor
+            </li>
+            <li
+              class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
+            >
+              W3C
+            </li>
+            <li
+              class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
+            >
+              HTML5 Doctor
+            </li>
+            <li
+              class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
+            >
+              W3C
+            </li>
+            <li
+              class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
+            >
+              HTML5 Spec (working draft)
+            </li>
+            <li
+              class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
+            >
+              wordpress
+            </li>
+            <li
+              class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
+            >
+              HTML5 Spec (working draft)
+            </li>
+            <li
+              class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
+            >
+              wordpress
+            </li>
+            <li
+              class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
+            >
+              HTML5 Spec (working draft)
+            </li>
+            <li
+              class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
+            >
+              wordpress
+            </li>
+            <li
+              class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
+            >
+              Coding Online
+            </li>
+            <li
+              class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
+            >
+              Wikipedia
+            </li>
+            <li
+              class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
+            >
+              Coding Online
+            </li>
+            <li
+              class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
+            >
+              Wikipedia
+            </li>
+            <li
+              class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
+            >
+              Coding Online
+            </li>
+            <li
+              class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
+            >
+              Wikipedia
+            </li>
+          </ul>
+        </aside>
 
-				<aside class="w-1/6">
-					<h2 class="text-2xl text-primaryColor">1 of 4 columns</h2>
-					<ul>
-						<!-- update span into li elements Feb 2-->
-						<li
-							class="flex gap-2 py-[3px] text-[small] border-b-[1px] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
-						>
-							<img
-								src="http://via.placeholder.com/15x15"
-								alt="social-delicous"
-								class="w-[15px] h-[15px]"
-							/>
-							<p>delicious</p>
-						</li>
+        <aside class="w-1/6">
+          <h2 class="text-2xl text-primaryColor">1 of 4 columns</h2>
+          <ul>
+            <!-- update span into li elements Feb 2-->
+            <li
+              class="flex gap-2 py-[3px] text-[small] border-b-[1px] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
+            >
+              <img
+                src="http://via.placeholder.com/15x15"
+                alt="social-delicous"
+                class="w-[15px] h-[15px]"
+              />
+              <p>delicious</p>
+            </li>
 
-						<li
-							class="flex gap-2 py-[3px] text-[small] border-b-[1px] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
-						>
-							<img
-								src="http://via.placeholder.com/15x15"
-								alt="social-digg"
-								class="w-[15px] h-[15px]"
-							/>
-							<p>digg</p>
-						</li>
+            <li
+              class="flex gap-2 py-[3px] text-[small] border-b-[1px] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
+            >
+              <img
+                src="http://via.placeholder.com/15x15"
+                alt="social-digg"
+                class="w-[15px] h-[15px]"
+              />
+              <p>digg</p>
+            </li>
 
-						<li
-							class="flex gap-2 py-[3px] text-[small] border-b-[1px] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
-						>
-							<img
-								src="http://via.placeholder.com/15x15"
-								alt="social-facebook"
-								class="w-[15px] h-[15px]"
-							/>
-							<p>facebook</p>
-						</li>
+            <li
+              class="flex gap-2 py-[3px] text-[small] border-b-[1px] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
+            >
+              <img
+                src="http://via.placeholder.com/15x15"
+                alt="social-facebook"
+                class="w-[15px] h-[15px]"
+              />
+              <p>facebook</p>
+            </li>
 
-						<li
-							class="flex gap-2 py-[3px] text-[small] border-b-[1px] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
-						>
-							<img
-								src="http://via.placeholder.com/15x15"
-								alt="social-last.fm"
-								class="w-[15px] h-[15px]"
-							/>
-							<p>last.fm</p>
-						</li>
+            <li
+              class="flex gap-2 py-[3px] text-[small] border-b-[1px] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
+            >
+              <img
+                src="http://via.placeholder.com/15x15"
+                alt="social-last.fm"
+                class="w-[15px] h-[15px]"
+              />
+              <p>last.fm</p>
+            </li>
 
-						<li
-							class="flex gap-2 py-[3px] text-[small] border-b-[1px] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
-						>
-							<img
-								src="http://via.placeholder.com/15x15"
-								alt="social-rss"
-								class="w-[15px] h-[15px]"
-							/>
-							<p>rss</p>
-						</li>
+            <li
+              class="flex gap-2 py-[3px] text-[small] border-b-[1px] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
+            >
+              <img
+                src="http://via.placeholder.com/15x15"
+                alt="social-rss"
+                class="w-[15px] h-[15px]"
+              />
+              <p>rss</p>
+            </li>
 
-						<li
-							class="flex gap-2 py-[3px] text-[small] border-b-[1px] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
-						>
-							<img
-								src="http://via.placeholder.com/15x15"
-								alt="social-twitter"
-								class="w-[15px] h-[15px]"
-							/>
-							<p>twitter</p>
-						</li>
-					</ul>
-				</aside>
-			</section>
+            <li
+              class="flex gap-2 py-[3px] text-[small] border-b-[1px] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
+            >
+              <img
+                src="http://via.placeholder.com/15x15"
+                alt="social-twitter"
+                class="w-[15px] h-[15px]"
+              />
+              <p>twitter</p>
+            </li>
+          </ul>
+        </aside>
+      </section>
 
-			<section class="flex justify-around p-5 mb-5 rounded bg-textLightColor">
-				<header class="basis-1/3">
-					<h2 class="text-2xl text-primaryColor">
-						<a class="hover:text-textLightColor hover:bg-primaryColor" href=""
-							>Copy Right section
-						</a>
-					</h2>
-					<p class="text-[small]">Amazing Work</p>
-				</header>
-				<img
-					class="w-[50px] h-[50px] mr-5"
-					src="http://via.placeholder.com/50x50"
-					alt="footer-image"
-				/>
-				<p class="text-[small] self-center basis-2/3 leading-[14px]">
-					Coding Online is a website and blog that offers resources and advice to web developers and
-					designer. It could be founded by you because it doesn't exist today.
-				</p>
-			</section>
+      <section class="flex justify-around p-5 mb-5 rounded bg-textLightColor">
+        <header class="basis-1/3">
+          <h2 class="text-2xl text-primaryColor">
+            <a class="hover:text-textLightColor hover:bg-primaryColor" href=""
+              >Copy Right section
+            </a>
+          </h2>
+          <p class="text-[small]">Amazing Work</p>
+        </header>
+        <img
+          class="w-[50px] h-[50px] mr-5"
+          src="http://via.placeholder.com/50x50"
+          alt="footer-image"
+        />
+        <p class="text-[small] self-center basis-2/3 leading-[14px]">
+          Coding Online is a website and blog that offers resources and advice
+          to web developers and designer. It could be founded by you because it
+          doesn't exist today.
+        </p>
+      </section>
 
-			<aside class="flex justify-end text-sm">
-				<time class="pr-2">2005-2009</time>
-				<a
-					class="underline text-primaryColor hover:bg-primaryColor hover:text-textLightColor"
-					href=""
-					>Coding Online</a
-				>
-				<span>.</span>
-				<!-- re-evaluate p tag above -->
-				<!-- change p tag into a tag Feb 2 -->
-			</aside>
-		</footer>
-		<!-- </div> -->
-	</body>
+      <aside class="flex justify-end text-sm">
+        <time class="pr-2">2005-2009</time>
+        <a
+          class="underline text-primaryColor hover:bg-primaryColor hover:text-textLightColor"
+          href=""
+          >Coding Online</a
+        >
+        <span>.</span>
+        <!-- re-evaluate p tag above -->
+        <!-- change p tag into a tag Feb 2 -->
+      </aside>
+    </footer>
+    <!-- </div> -->
+  </body>
 </html>
