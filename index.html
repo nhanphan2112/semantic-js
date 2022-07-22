@@ -14,6 +14,7 @@
     />
     <title>Index - GrenX Inc</title>
     <script defer src="./index.js"></script>
+    <script defer src="./menuButton.js"></script>
   </head>
   <body class="m-0 flex flex-col items-center root bg-[#f5f4ef]">
     <header class="bg-[#00713d] text-white w-full">
@@ -29,7 +30,8 @@
       </nav>
     </header>
 
-    <nav class="topnav" id="myTopnav">
+    <!-- BELOW IS MESSY NAV BAR WITH HAMBURGUR MENU MESS -->
+    <!-- <nav class="topnav" id="myTopnav">
       <button class="" onclick="myFunction()">
         <a href="javascript:void(0);" class="icon">
           <i class="fa fa-bars"></i>
@@ -37,14 +39,10 @@
       </button>
       <ul class="topnav__options">
         <li class="option">
-          <a href="#shop">SHOP</a>
+          <a href="#">SHOP</a>
         </li>
         <li class="group option-with-dropdown">
-          <!-- TODO focus is better than hover -->
-          <!-- TODO what is the best semantic button, span? -->
-          <button class="" href="#scienceOfGreenTea">
-            SCIENCE OF GREEN TEA
-          </button>
+          <button role="button" class="" href="#">SCIENCE OF GREEN TEA</button>
           <ul class="dropdown">
             <li class="">
               <a class="dropdown__item" href="#">View All Health Benefits</a>
@@ -67,10 +65,10 @@
           </ul>
         </li>
         <li class="option">
-          <a href="#join">JOIN</a>
+          <a href="#">JOIN</a>
         </li>
         <li class="group option-with-dropdown">
-          <button class="" href="#mallLocation">MALL LOCATIONS</button>
+          <button class="" href="#">MALL LOCATIONS</button>
           <ul class="dropdown">
             <li class="">
               <a class="dropdown__item whitespace-nowrap" href="#"
@@ -85,13 +83,72 @@
           </ul>
         </li>
         <li class="option">
-          <a href="#68-million">68 MILLION</a>
+          <a href="#">68 MILLION</a>
         </li>
       </ul>
+    </nav> -->
+
+    <!-- BELOW is an example of accessible menu button -->
+    <nav class="w-full bg-[#45aa42] text-white mb-5" id="">
+      <div class="menu-button-links">
+        <button
+          type="button"
+          id="menubutton"
+          aria-haspopup="true"
+          aria-controls="menu2"
+        >
+          WAI-ARIA Quick Links
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="down"
+            width="12"
+            height="9"
+            viewBox="0 0 12 9"
+          >
+            <polygon points="1 0, 11 0, 6 8"></polygon>
+          </svg>
+        </button>
+        <ul id="menu2" role="menu" aria-labelledby="menubutton">
+          <li role="none">
+            <a role="menuitem" href="https://www.w3.org/"> W3C Home Page </a>
+          </li>
+          <li role="none">
+            <a
+              role="menuitem"
+              href="https://www.w3.org/standards/webdesign/accessibility"
+            >
+              W3C Web Accessibility Initiative
+            </a>
+          </li>
+          <li role="none">
+            <a role="menuitem" href="https://www.w3.org/TR/wai-aria/">
+              Accessible Rich Internet Application Specification
+            </a>
+          </li>
+          <li role="none">
+            <a role="menuitem" href="https://www.w3.org/TR/wai-aria-practices/">
+              WAI-ARIA Authoring Practices
+            </a>
+          </li>
+          <li role="none">
+            <a
+              role="menuitem"
+              href="https://www.w3.org/TR/wai-aria-implementation/"
+            >
+              WAI-ARIA Implementation Guide
+            </a>
+          </li>
+          <li role="none">
+            <a role="menuitem" href="https://www.w3.org/TR/accname-aam-1.1/">
+              Accessible Name and Description
+            </a>
+          </li>
+        </ul>
+      </div>
     </nav>
 
     <!-- BELOW IS A FUNCTIONAL nav bar without hamburber -->
-    <!-- <nav class="w-full bg-[#45aa42] text-white mb-5" id="">
+    <nav class="w-full bg-[#45aa42] text-white mb-5" id="">
       <ul
         class="w-[88%] flex flex-wrap justify-end m-auto rounded-md bg-textDarkColor"
       >
@@ -103,6 +160,8 @@
           >
         </li>
         <li class="group inline-block px-5 py-3 relative">
+          <!-- TODO focus is better than hover -->
+          <!-- TODO what is the best semantic button, span? -->
           <span class=""> SCIENCE OF GREEN TEA </span>
           <ul class="dropdown">
             <li class="">
@@ -155,7 +214,7 @@
           >
         </li>
       </ul>
-    </nav> -->
+    </nav>
 
     <main class="w-[88%] font-[550]">
       <section class="carouseel">
