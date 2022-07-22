@@ -1011,15 +1011,19 @@ Show the link that contains should open and close the topnav (.icon) */
 .menu-button-links {
   margin: 0;
   font-size: 110%;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .menu-button-links button {
   margin: 0;
-  padding: 6px;
+  padding: 0;
   display: inline-block;
   position: relative;
-  background-color: #034575;
-  border: 1px solid #034575;
+  /* background-color: #034575;
+    border: 1px solid #034575; */
   font-size: 0.9em;
   color: white;
   border-radius: 5px;
