@@ -13,6 +13,11 @@ class MenuButtonLinks {
       this.onButtonKeydown.bind(this)
     );
     this.buttonNode.addEventListener("click", this.onButtonClick.bind(this));
+    this.buttonNode.addEventListener(
+      "mouseover",
+      this.onButtonClick.bind(this)
+    );
+    // this.buttonNode.addEventListener("mouseout", this.closePopup.bind(this));
     var nodes = domNode.querySelectorAll('[role="menuitem"]');
     for (var i = 0; i < nodes.length; i++) {
       var menuitem = nodes[i];
