@@ -13,11 +13,20 @@ class MenuButtonLinks {
       this.onButtonKeydown.bind(this)
     );
     this.buttonNode.addEventListener("click", this.onButtonClick.bind(this));
-    this.buttonNode.addEventListener(
-      "mouseover",
-      this.onButtonClick.bind(this)
-    );
-    // this.buttonNode.addEventListener("mouseout", this.closePopup.bind(this));
+    // TODO there is still a bug on this mouse over because if you hove the button twice, it will close the menu
+
+    // this.buttonNode.addEventListener(
+    //   "mouseover",
+    //   this.onButtonClick.bind(this)
+    // );
+
+    // TODO there is still a bug with this mouse leave if you don't move the focus on other menu item
+    // Thought, maybe I should handle mouseover and mouseleave using css?
+
+    // this.menuNode.addEventListener("mouseleave", this.closePopup.bind(this));
+
+    // this.buttonNode.addEventListener("mouseleave", this.closePopup2.bind(this));
+    // this.buttonNode.addEventListener("mouseout", this.closePopup2.bind(this));
     var nodes = domNode.querySelectorAll('[role="menuitem"]');
     for (var i = 0; i < nodes.length; i++) {
       var menuitem = nodes[i];
@@ -121,6 +130,16 @@ class MenuButtonLinks {
       this.buttonNode.removeAttribute("aria-expanded");
       this.menuNode.style.display = "none";
     }
+  }
+
+  closePopup2() {
+    // if (this.nodes !== document.activeElement) {
+    //   console.log("I am pritting from closepopup2!");
+    //   this.buttonNode.removeAttribute("aria-expanded");
+    //   this.menuNode.style.display = "none";
+    // }
+    this.buttonNode.removeAttribute("aria-expanded");
+    this.menuNode.style.display = "none";
   }
   isOpen() {
     return this.buttonNode.getAttribute("aria-expanded") === "true";

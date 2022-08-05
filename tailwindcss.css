@@ -132,8 +132,8 @@ Show the link that contains should open and close the topnav (.icon) */
 
 /* CSS for example accesible menu button */
 .menu-button-links {
-    margin: 0;
-    font-size: 110%;
+    /* margin: 0;
+    font-size: 110%; */
 	@apply px-5 py-3;
 }
 .menu-button-links button {
@@ -143,11 +143,11 @@ Show the link that contains should open and close the topnav (.icon) */
     position: relative;
     /* background-color: #034575;
     border: 1px solid #034575; */
-    font-size: 0.9em;
+    /* font-size: 0.9em; */
     color: white;
-    border-radius: 5px;
+    /* border-radius: 5px; */
 }
-.menu-button-links [role="menu"] {
+/* .menu-button-links [role="menu"] {
     margin: 0;
     padding: 7px 4px;
     list-style: none;
@@ -157,34 +157,45 @@ Show the link that contains should open and close the topnav (.icon) */
     border-radius: 5px;
     background-color: #eee;
 	z-index: 10;
+} */
+.menu-button-links [role="menu"] {
+	@apply absolute hidden bg-white text-sm text-gray-700 mt-3;
+	@apply border-x border-b-4 py-1 list-none z-10;
+    /* margin: 0; */
+    /* padding: 7px 4px; */
+    /* list-style: none; */
+    /* border: 2px solid #034575;
+    border-radius: 5px; */
+	/* z-index: 10; */
 }
 .menu-button-links [role="menuitem"],
 .menu-button-links [role="separator"] {
     margin: 0;
     padding: 6px;
     display: block;
-    width: 24em;
-    background-color: #eee;
+    /* width: 24em; */
+    /* background-color: #eee; */
     border: none;
     color: black;
     border-radius: 5px;
 }
-.menu-button-links [role="separator"] {
+/* .menu-button-links [role="separator"] {
     padding-top: 3px;
     background-image: url("../images/separator.svg");
     background-position: center;
     background-repeat: repeat-x;
-}
-.menu-button-links button svg.down {
+} */
+/* .menu-button-links button svg.down {
     padding-left: 0.125em;
     fill: currentcolor;
     stroke: currentcolor;
 }
 .menu-button-links button[aria-expanded="true"] svg.down {
     transform: rotate(180deg);
-}
+} */
+
 /* focus styling */
-.menu-button-links button:hover,
+/* .menu-button-links button:hover,
 .menu-button-links button:focus,
 .menu-button-links button[aria-expanded="true"] {
     padding: 4px;
@@ -193,11 +204,12 @@ Show the link that contains should open and close the topnav (.icon) */
     color: #222;
     outline: none;
     margin: 0;
-}
+} */
 .menu-button-links [role="menuitem"]:focus {
+	@apply bg-[#45aa42];
     padding: 4px;
-    border: 2px solid #034575;
-    background: #034575;
+    /* border: 2px solid #034575; */
+    /* background: #034575; */
     color: #fff;
     outline: none;
     margin: 0;
