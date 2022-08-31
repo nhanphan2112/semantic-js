@@ -88,13 +88,14 @@
       </ul>
     </nav> -->
 
-    <!-- BELOW is an example of accessible menu button -->
+    <!-- BELOW is an accessible menu button -->
     <nav class="w-full bg-[#45aa42] text-white mb-5" id="">
       <ul class="w-[88%] flex flex-wrap justify-end m-auto rounded-md">
         <li>
           <a class="block px-5 py-3 hover:bg-primaryColor" href="#">SHOP</a>
         </li>
-        <li class="menu-button-links group">
+
+        <li class="menu-button-links">
           <button
             type="button"
             id="menubutton"
@@ -103,12 +104,7 @@
           >
             SCIENCE OF GREEN TEA
           </button>
-          <ul
-            class="group-hover:block group-hover:z-10"
-            id="menu2"
-            role="menu"
-            aria-labelledby="menubutton"
-          >
+          <ul id="menu2" role="menu" aria-labelledby="menubutton">
             <li role="none">
               <a role="menuitem" href="#">View All Health Benefits </a>
             </li>
@@ -129,68 +125,58 @@
             </li>
           </ul>
         </li>
-      </ul>
-    </nav>
 
-    <!-- BELOW IS A FUNCTIONAL nav bar without hamburber -->
-    <nav class="w-full bg-[#45aa42] text-white mb-5" id="">
-      <ul class="w-[88%] flex flex-wrap justify-end m-auto rounded-md">
         <li>
-          <a class="block px-5 py-3 hover:bg-primaryColor" href="#">SHOP</a>
+          <a class="block px-5 py-3 hover:bg-primaryColor" href="#">JOIN</a>
         </li>
-        <li class="group inline-block px-5 py-3 relative">
-          <!-- TODO focus is better than hover -->
-          <!-- TODO what is the best semantic button, span? -->
-          <span class=""> SCIENCE OF GREEN TEA </span>
-          <ul class="dropdown">
-            <li class="">
-              <a class="dropdown__item" href="#">View All Health Benefits</a>
+
+        <li class="menu-button-links">
+          <button
+            type="button"
+            id="menubutton"
+            aria-haspopup="true"
+            aria-controls="menu2"
+          >
+            MALL LOCATIONS
+          </button>
+          <ul id="menu2" role="menu" aria-labelledby="menubutton">
+            <li role="none">
+              <a role="menuitem" href="#">US Locations </a>
             </li>
-            <li class="">
-              <a class="dropdown__item" href="#">Why Drink Green Tea?</a>
-            </li>
-            <li class="">
-              <a class="dropdown__item" href="#">GreenTeaHP University</a>
-            </li>
-            <li class="">
-              <a class="dropdown__item" href="#">Seven Day Challenge</a>
-            </li>
-            <li class="">
-              <a class="dropdown__item" href="#">Fast Facts</a>
-            </li>
-            <li class="">
-              <a class="dropdown__item whitespace-no-wrap" href="#">FAQ's</a>
+            <li role="none">
+              <a role="menuitem" href="#">International Locations </a>
             </li>
           </ul>
         </li>
-        <li>
-          <a
-            class="block px-5 py-3 hover:bg-primaryColor text-textLightColor"
-            href="#join"
-            >JOIN</a
+
+        <li class="menu-button-links">
+          <button
+            type="button"
+            id="menubutton"
+            aria-haspopup="true"
+            aria-controls="menu2"
           >
-        </li>
-        <li class="group inline-block px-5 py-3 relative">
-          <button class="" href="#">MALL LOCATIONS</button>
-          <ul class="dropdown">
-            <li class="">
-              <a class="dropdown__item whitespace-nowrap" href="#"
-                >View All Health Benefits</a
-              >
+            68 MILLION
+          </button>
+          <ul id="menu2" role="menu" aria-labelledby="menubutton">
+            <li role="none">
+              <a role="menuitem" href="#">Our Goal </a>
             </li>
-            <li class="">
-              <a class="dropdown__item whitespace-nowrap" href="#"
-                >Why Drink Green Tea?</a
-              >
+            <li role="none">
+              <a role="menuitem" href="#"
+                >Ask About Green Tea HP<small>TM</small>
+              </a>
+            </li>
+            <li role="none">
+              <a role="menuitem" href="#">About GRENX</a>
+            </li>
+            <li role="none">
+              <a role="menuitem" href="#">Meet the Management</a>
+            </li>
+            <li role="none">
+              <a role="menuitem" href="#">Meet Dr. Hendrix</a>
             </li>
           </ul>
-        </li>
-        <li>
-          <a
-            class="block px-5 py-3 hover:bg-primaryColor text-textLightColor"
-            href="#68-million"
-            >68 MILLION</a
-          >
         </li>
       </ul>
     </nav>
@@ -234,7 +220,7 @@
           <li class="carouseel__item">
             <img
               class=""
-              src="/photos/birds.png"
+              src="https://c.tenor.com/GtXtEoK5_PUAAAAC/panda-rage.gif"
               alt="change the way you look, feel, and age"
             />
           </li>
