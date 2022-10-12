@@ -8,6 +8,12 @@ body {
 @tailwind components;
 @tailwind utilities;
 
+.fa-bars { transform: scale(1.5,1); -webkit-text-stroke: 1px background-color;}
+
+.headernav {
+	@apply bg-[#00713d] text-white w-full;
+}
+
 .topnav {
 	@apply flex w-full bg-[#45aa42] text-white mb-5 text-sm;
 }
@@ -25,49 +31,78 @@ body {
 	@apply block px-5 py-3;
 }
 
-.topnav .option-with-dropdown{
-	@apply inline-block px-5 py-3 relative;
+.topnav .home{
+	@apply invisible;
 }
+
 
 /* When the screen is less than 770 pixels wide, hide all links, except for hamburger button. 
 Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 770px) {
-	.topnav{
-		@apply p-2 flex justify-end;
+	.headernav{
+		@apply hidden;
 	}
-	.topnav ul{
-		display: none;
+
+	.topnav{
+		@apply p-2 pr-0 flex flex-row-reverse m-auto mb-3 h-[52px];
+	}
+	.topnav .topnav__options{
+		/* overflow: hidden; */
+		opacity: 0;
+		max-height: 0;
+		-webkit-transition: max-height .5s ease-out;
+		transition: max-height .5s ease-out;
+		width: 100%;
 	}
 	.topnav .icon {
-		@apply bg-[#f7f7f7] text-[#888] text-lg block px-3 py-1;
+		@apply bg-[#f7f7f7] text-[#888] text-lg block px-3 py-1 self-end mr-3;
+	}
+
+	/* .menu-button-links [role="menu"]{
+		max-height: 0;
+		-webkit-transition: max-height .5s ease-out;
+		transition: max-height .5s ease-out;
+		width: 100%;
+	} */
+
+	.menu-button-links [role="menuitem"]{
+		@apply w-full bg-[#f7f7f7] !pl-8;
+		@apply focus:!bg-[#f7f7f7] focus:outline-none focus:!text-gray-400;
+	}
+
+	.menu-button-links {
+		@apply !px-0 py-3;
+	}
+
+	.menu-button-links button {
+		@apply !ml-5;
 	}
 }
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 770px) {
 	.topnav.responsive {
-		position: relative;
-		@apply block w-full bg-[#45aa42] text-white mb-5;
+		/* position: relative; */
+		/* @apply block w-full bg-[#45aa42] text-white mb-5; */
+		@apply flex flex-col w-full h-fit bg-[#45aa42] text-white mb-5 px-0;
 	}
+
+	.topnav.responsive .topnav__options{
+		@apply flex flex-col max-h-[500px] border-t border-white w-full opacity-100;
+		/* @apply block max-h-[500px] border-t border-white w-full opacity-100; */
+	}
+
+	.topnav.responsive .home{
+		@apply visible;
+	}
+
 	.topnav.responsive .icon {
-		position: absolute;
-		right: 0;
-		top: 0;
-		@apply block w-full;
+		@apply mb-2;
 	}
 
 	.topnav.responsive .option {
-		display: block;
 	}
 
-	.topnav.responsive .option-with-dropdown {
-		/* float: none; */
-		display: block;
-	}
-	
-	.topnav.responsive .topnav__options{
-		@apply flex flex-col;
-	}
 }
 
 /* .carousel {
@@ -120,15 +155,6 @@ Show the link that contains should open and close the topnav (.icon) */
 	@apply bg-neutral-400;
 }
 
-.dropdown {
-	@apply absolute hidden bg-white text-gray-700 mt-3 text-sm group-hover:block group-hover:z-10;
-	@apply border-x border-b-4 py-1;
-}
-
-.dropdown__item {
-	@apply hover:bg-gray-100 py-1 px-4 block w-fit;
-}
-
 
 /* CSS for example accesible menu button */
 .menu-button-links {
@@ -141,8 +167,9 @@ Show the link that contains should open and close the topnav (.icon) */
 .menu-button-links [role="menu"] {
 	@apply absolute hidden bg-white text-sm text-gray-700 mt-3;
 	@apply border-x border-b-4 py-1 list-none z-10;
+	/* @apply border-x border-b-4 py-1 list-none z-10 tablet:bg-red-500; */
 }
 .menu-button-links [role="menuitem"]{
-	@apply block border-none m-0 p-[6px];
+	@apply block border-none m-0 py-[6px] px-5;
 	@apply focus:bg-[#45aa42]/80 focus:outline-none focus:text-white;
 }

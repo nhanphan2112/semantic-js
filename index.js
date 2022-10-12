@@ -1,12 +1,15 @@
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
 function myFunction() {
-  console.log("you are inside myFunction");
+  // console.log("you are inside myFunction");
   var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
+  // use classList because it more performance + set concept
+  // use x.classList.toggle
+  // if (x.className === "topnav") {
+  //   x.className += " responsive";
+  // } else {
+  //   x.className = "topnav";
+  // }
+  x.classList.toggle("responsive");
 }
 
 // carousel by next and previous buttons

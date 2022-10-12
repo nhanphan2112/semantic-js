@@ -18,11 +18,21 @@ class MenuButtonLinks {
     //   "mouseover",
     //   this.openPopup.bind(this)
     // );
-    this.domNode.addEventListener("mouseover", this.openPopup.bind(this));
+
+    // Good code line 23-26
+    this.domNode.addEventListener(
+      "mouseover",
+      this.responsiveOpenPopup.bind(this)
+    );
 
     // this.menuNode.addEventListener("mouseleave", this.closePopup.bind(this));
     // this.buttonNode.addEventListener("mouseleave", this.closePopup.bind(this));
-    this.domNode.addEventListener("mouseleave", this.closePopup.bind(this));
+
+    // Good code line 31
+    this.domNode.addEventListener(
+      "mouseleave",
+      this.responsiveClosePopup.bind(this)
+    );
 
     // wait a sec or 2 be
     // I know if leave the button but did I hover the menu?
@@ -130,10 +140,36 @@ class MenuButtonLinks {
     return -1;
   }
   // Popup menu methods
-  openPopup() {
+  responsiveOpenPopup() {
+    if (window.innerWidth <= 771) {
+      return;
+    }
     this.menuNode.style.display = "block";
     this.buttonNode.setAttribute("aria-expanded", "true");
   }
+
+  openPopup() {
+    if (window.innerWidth < 770) {
+      // this.menuNode.style.maxHeight = 500;
+      this.menuNode.style.display = "contents";
+      // this.menuNode.style.backgroundColor = "#f7f7f7";
+      this.buttonNode.setAttribute("aria-expanded", "true");
+    } else {
+      this.menuNode.style.display = "block";
+      this.buttonNode.setAttribute("aria-expanded", "true");
+    }
+  }
+
+  responsiveClosePopup() {
+    if (window.innerWidth <= 771) {
+      return;
+    }
+    if (this.isOpen()) {
+      this.buttonNode.removeAttribute("aria-expanded");
+      this.menuNode.style.display = "none";
+    }
+  }
+
   closePopup() {
     if (this.isOpen()) {
       this.buttonNode.removeAttribute("aria-expanded");

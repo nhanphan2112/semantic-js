@@ -521,6 +521,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: grid;
 }
 
+.contents{
+  display: contents;
+}
+
 .h-\[15px\]{
   height: 15px;
 }
@@ -533,12 +537,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-height: 360px;
 }
 
-.w-full{
-  width: 100%;
-}
-
 .w-\[88\%\]{
   width: 88%;
+}
+
+.w-full{
+  width: 100%;
 }
 
 .w-4\/5{
@@ -621,10 +625,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   align-self: center;
 }
 
-.whitespace-nowrap{
-  white-space: nowrap;
-}
-
 .rounded-md{
   border-radius: 0.375rem;
 }
@@ -644,11 +644,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-\[\#f5f4ef\]{
   --tw-bg-opacity: 1;
   background-color: rgb(245 244 239 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#00713d\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 113 61 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#45aa42\]{
@@ -781,6 +776,19 @@ Ensure the default browser behavior of the `hidden` attribute.
           text-decoration-line: underline;
 }
 
+.fa-bars {
+  transform: scale(1.5,1);
+  -webkit-text-stroke: 1px background-color;
+}
+
+.headernav{
+  width: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 113 61 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .topnav{
   margin-bottom: 1.25rem;
   display: flex;
@@ -814,31 +822,40 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 0.75rem;
 }
 
-.topnav .option-with-dropdown{
-  position: relative;
-  display: inline-block;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+.topnav .home{
+  visibility: hidden;
 }
 
 /* When the screen is less than 770 pixels wide, hide all links, except for hamburger button. 
 Show the link that contains should open and close the topnav (.icon) */
 
 @media screen and (max-width: 770px) {
-  .topnav{
-    display: flex;
-    justify-content: flex-end;
-    padding: 0.5rem;
-  }
-
-  .topnav ul{
+  .headernav{
     display: none;
   }
 
+  .topnav{
+    margin: auto;
+    margin-bottom: 0.75rem;
+    display: flex;
+    height: 52px;
+    flex-direction: row-reverse;
+    padding: 0.5rem;
+    padding-right: 0px;
+  }
+
+  .topnav .topnav__options{
+    /* overflow: hidden; */
+    opacity: 0;
+    max-height: 0;
+    transition: max-height .5s ease-out;
+    width: 100%;
+  }
+
   .topnav .icon{
+    margin-right: 0.75rem;
     display: block;
+    align-self: flex-end;
     --tw-bg-opacity: 1;
     background-color: rgb(247 247 247 / var(--tw-bg-opacity));
     padding-left: 0.75rem;
@@ -850,42 +867,84 @@ Show the link that contains should open and close the topnav (.icon) */
     --tw-text-opacity: 1;
     color: rgb(136 136 136 / var(--tw-text-opacity));
   }
+
+  /* .menu-button-links [role="menu"]{
+		max-height: 0;
+		-webkit-transition: max-height .5s ease-out;
+		transition: max-height .5s ease-out;
+		width: 100%;
+	} */
+
+  .menu-button-links [role="menuitem"]{
+    width: 100%;
+    --tw-bg-opacity: 1;
+    background-color: rgb(247 247 247 / var(--tw-bg-opacity));
+    padding-left: 2rem !important;
+  }
+
+  .menu-button-links [role="menuitem"]:focus{
+    --tw-bg-opacity: 1 !important;
+    background-color: rgb(247 247 247 / var(--tw-bg-opacity)) !important;
+    --tw-text-opacity: 1 !important;
+    color: rgb(156 163 175 / var(--tw-text-opacity)) !important;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+  }
+
+  .menu-button-links{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .menu-button-links button{
+    margin-left: 1.25rem !important;
+  }
 }
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 
 @media screen and (max-width: 770px) {
   .topnav.responsive {
-    position: relative;
+    /* position: relative; */
+    /* @apply block w-full bg-[#45aa42] text-white mb-5; */
     margin-bottom: 1.25rem;
-    display: block;
+    display: flex;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     width: 100%;
+    flex-direction: column;
     --tw-bg-opacity: 1;
     background-color: rgb(69 170 66 / var(--tw-bg-opacity));
+    padding-left: 0px;
+    padding-right: 0px;
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
   }
 
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-    display: block;
+  .topnav.responsive .topnav__options{
+    display: flex;
+    max-height: 500px;
     width: 100%;
+    flex-direction: column;
+    border-top-width: 1px;
+    --tw-border-opacity: 1;
+    border-color: rgb(255 255 255 / var(--tw-border-opacity));
+    opacity: 1;
+    /* @apply block max-h-[500px] border-t border-white w-full opacity-100; */
+  }
+
+  .topnav.responsive .home{
+    visibility: visible;
+  }
+
+  .topnav.responsive .icon{
+    margin-bottom: 0.5rem;
   }
 
   .topnav.responsive .option {
-    display: block;
-  }
-
-  .topnav.responsive .option-with-dropdown {
-    /* float: none; */
-    display: block;
-  }
-
-  .topnav.responsive .topnav__options{
-    display: flex;
-    flex-direction: column;
   }
 }
 
@@ -957,47 +1016,6 @@ Show the link that contains should open and close the topnav (.icon) */
   background-color: rgb(163 163 163 / var(--tw-bg-opacity));
 }
 
-.dropdown{
-  position: absolute;
-  margin-top: 0.75rem;
-  display: none;
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity));
-}
-
-.group:hover .dropdown{
-  z-index: 10;
-  display: block;
-}
-
-.dropdown{
-  border-left-width: 1px;
-  border-right-width: 1px;
-  border-bottom-width: 4px;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-}
-
-.dropdown__item{
-  display: block;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.dropdown__item:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
-}
-
 /* CSS for example accesible menu button */
 
 .menu-button-links{
@@ -1033,13 +1051,17 @@ Show the link that contains should open and close the topnav (.icon) */
   border-bottom-width: 4px;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+  /* @apply border-x border-b-4 py-1 list-none z-10 tablet:bg-red-500; */
 }
 
 .menu-button-links [role="menuitem"]{
   margin: 0px;
   display: block;
   border-style: none;
-  padding: 6px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .menu-button-links [role="menuitem"]:focus{
