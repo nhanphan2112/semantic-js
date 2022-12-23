@@ -11,7 +11,7 @@ body {
 .fa-bars { transform: scale(1.5,1); -webkit-text-stroke: 1px background-color;}
 
 .headernav {
-	@apply bg-[#00713d] text-white w-full;
+	@apply bg-[#00713d] text-white w-full h-[50px] flex;
 }
 
 .topnav {
@@ -24,7 +24,7 @@ body {
 }
 
 .topnav__options{
-	@apply w-[88%] flex justify-end m-auto;
+	@apply w-[65%] flex justify-end m-auto;
 }
 
 .topnav .option{
@@ -173,3 +173,81 @@ Show the link that contains should open and close the topnav (.icon) */
 	@apply block border-none m-0 py-[6px] px-5;
 	@apply focus:bg-[#45aa42]/80 focus:outline-none focus:text-white;
 }
+
+	
+.tabs {
+    /* font-family: "lucida grande", sans-serif; */
+}
+[role="tablist"] {
+    min-width: 550px;
+	@apply absolute bottom-[10%] left-[50%];
+
+}
+
+/* [role="tab"],
+[role="tab"]:focus,
+[role="tab"]:hover {
+    position: relative;
+    z-index: 2;
+    top: 2px;
+    margin: 0;
+    margin-top: 4px;
+    padding: 3px 3px 4px;
+    border: 1px solid hsl(219deg 1% 72%);
+    border-bottom: 2px solid hsl(219deg 1% 72%);
+    border-radius: 5px 5px 0 0;
+    overflow: visible;
+    background: hsl(220deg 20% 94%);
+    outline: none;
+    font-weight: bold;
+} */
+
+[role="tab"] {
+    /* border-bottom: 1px solid hsl(219deg 1% 72%); */
+	@apply w-[10px] h-[10px] inline-block mx-[2px] bg-neutral-200;
+}
+
+[role="tab"][aria-selected="true"] {
+	@apply bg-neutral-400;
+    /* padding: 2px 2px 4px;
+    margin-top: 0;
+    border-width: 2px;
+    border-top-width: 6px;
+    border-top-color: rgb(36 116 214);
+    border-bottom-color: hsl(220deg 43% 99%);
+    background: hsl(220deg 43% 99%); */
+}
+
+/* [role="tab"][aria-selected="false"] {
+    border-bottom: 1px solid hsl(219deg 1% 72%);
+} */
+
+[role="tab"] span.focus {
+    display: inline-block;
+    margin: 2px;
+    padding: 4px 6px;
+}
+
+[role="tab"]:hover span.focus,
+[role="tab"]:focus span.focus,
+[role="tab"]:active span.focus {
+    padding: 2px 4px;
+    border: 2px solid rgb(36 116 214);
+    border-radius: 3px;
+}
+[role="tabpanel"] {
+    /* padding: 5px;
+    border: 2px solid hsl(219deg 1% 72%);
+    border-radius: 0 5px 5px;
+    background: hsl(220deg 43% 99%); */
+    min-height: 10em;
+    min-width: 550px;
+    overflow: auto;
+}
+[role="tabpanel"].is-hidden {
+    display: none;
+}
+[role="tabpanel"] p {
+    margin: 0;
+}
+

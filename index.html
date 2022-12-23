@@ -19,18 +19,47 @@
     <title>Index - GrenX Inc</title>
     <script defer src="./index.js"></script>
     <script defer src="./menuButton.js"></script>
+    <script defer src="./tabs.js"></script>
   </head>
   <body class="m-0 flex flex-col items-center root bg-[#f5f4ef]">
-    <header class="headernav">
-      <nav class="w-[88%] pt-4 flex m-auto justify-between">
-        <img src="/photos/logo.png" alt="Green tea HP logo" />
-        <address class="not-italic">Contact Us</address>
-        <button class="">
+    <!-- <header class="headernav"> -->
+    <!-- <nav class="w-[65%] flex m-auto items-center justify-between"> -->
+    <header class="w-full">
+      <nav
+        class="flex m-auto items-center justify-center bg-[#00713d] text-white w-full h-[50px]"
+      >
+        <button class="basis-[50%]">
+          <img src="/photos/logo.png" alt="Green tea HP logo" />
+        </button>
+        <button class="">Contact Us</button>
+        <span
+          class="flex space-x-7 h-full items-center border-x-[1px] border-gray-700 px-6 mx-6"
+        >
           <a href="#" class="fa fa-youtube-play fa-lg"></a>
           <a href="#" class="fa fa-brands fa-twitter fa-lg"></a>
           <a href="#" class="fa fa-brands fa-facebook-f fa-lg"></a>
-          <a href="#" class="fa fa-shopping-cart fa-lg"></a>
-        </button>
+        </span>
+        <a
+          href="#"
+          class="border-r-[1px] border-gray-700 h-full flex items-center pr-6 mr-6"
+          ><i class="fa fa-shopping-cart fa-lg"></i>
+          <p class="ml-2">Cart</p></a
+        >
+        <div class="menu-button-links">
+          <button
+            type="button"
+            id="menubutton"
+            aria-haspopup="true"
+            aria-controls="menu2"
+          >
+            My Account <i class="fa fa-caret-down" aria-hidden="true"></i>
+          </button>
+          <ul id="menu2" role="menu" aria-labelledby="menubutton">
+            <li role="none">
+              <a role="menuitem" href="#">SIGN IN </a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
 
@@ -104,7 +133,7 @@
           </ul>
         </li>
 
-        <li class="menu-button-links">
+        <li class="menu-button-links !pr-0">
           <button
             type="button"
             id="menubutton"
@@ -229,7 +258,8 @@
       </ul>
     </nav> -->
 
-    <main class="w-[88%] font-[550]">
+    <main class="w-[88%] font-[550] flex flex-col items-center">
+      <!-- BELOW IS A FUNCTIONAL carousel with indicator button with no accesiblity -->
       <section class="carouseel">
         <ul>
           <li class="carouseel__item carouseel__item--selected">
@@ -275,6 +305,130 @@
         </ul>
       </section>
 
+      <!-- Copy pasta example from WAI to learn about carousel requirement:
+      if tab elements are used for slide picker controls, 
+      they implement the keyboard interaction defined in the Tabs Pattern -->
+
+      <div class="tabs relative w-fit m-auto mb-5 border-b-4 p-4 bg-white">
+        <div role="tablist" aria-labelledby="tablist-1" class="automatic">
+          <button
+            class=""
+            id="tab-1"
+            type="button"
+            role="tab"
+            aria-selected="true"
+            aria-controls="tabpanel-1"
+          >
+            <!-- <span class="focus"> Maria Ahlefeldt </span> -->
+          </button>
+          <button
+            class=""
+            id="tab-2"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="tabpanel-2"
+            tabindex="-1"
+          >
+            <!-- <span class="focus"> Carl Andersen </span> -->
+          </button>
+          <button
+            class=""
+            id="tab-3"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="tabpanel-3"
+            tabindex="-1"
+          >
+            <!-- <span class="focus"> Ida da Fonseca </span> -->
+          </button>
+        </div>
+        <div
+          class=""
+          id="tabpanel-1"
+          role="tabpanel"
+          tabindex="0"
+          aria-labelledby="tab-1"
+        >
+          <figure class="">
+            <img
+              class=""
+              src="./photos/banner01.png"
+              alt="change the way you look, feel, and age"
+            />
+
+            <!-- Setting the title and button to match with the image -->
+            <!-- So we can remove aboslute position and top, left
+            Could still use absolute but could move it to another component
+            -->
+
+            <!-- 
+              Tried moviving button inside figcaption, remove all absolute positions from 
+              figcaption and button, setting absolute top-0 left-0 to div parent element of
+              figure class --- This make image smaller and position of tablist showing inline
+              instead of on top image
+
+              tired moviving button inside figcaption, remove all absolute positions from 
+              figcaption and button, SETTING img with relative position. then setting 
+              absolute position to figcaption --- This make tablist to be underneath and not 
+              on top of image (I must have create a stacking context somehow) + location of 
+              title and button need more edit without much success from flex styles 
+              apply on figcaption
+
+              parent div: bg as image. Make parent div desire height of the image
+              div (max wid flex flex-col) when flex-col
+                figcaption
+                button
+            -->
+            <figcaption
+              class="absolute top-[15%] left-[3.7%] font-['Open_Sans_Light'] font-normal"
+            >
+              <!-- there should only be 1 h1 for the entire html -->
+              <h1 class="text-4xl text-[#00713d] pb-3">CHANGE THE WAY</h1>
+              <h1 class="text-4xl text-[#45aa42] pb-2">
+                YOU LOOK, FEEL, AND AGE.
+              </h1>
+              <p class="text-xl text-gray-500">
+                Increase engergy, look refreshed and feel rejuvenated*.
+              </p>
+            </figcaption>
+            <button
+              class="absolute bottom-[10%] left-[3.7%] bg-[#45aa42] text-white text-small p-2"
+            >
+              TAKE THE 7-DAY CHALLENGE
+              <i class="fa fa-chevron-right fa-md" aria-hidden="true"></i>
+            </button>
+          </figure>
+        </div>
+        <div
+          id="tabpanel-2"
+          role="tabpanel"
+          tabindex="0"
+          aria-labelledby="tab-2"
+          class="is-hidden"
+        >
+          <img
+            class=""
+            src="/photos/birds.png"
+            alt="change the way you look, feel, and age"
+          />
+        </div>
+        <div
+          id="tabpanel-3"
+          role="tabpanel"
+          tabindex="0"
+          aria-labelledby="tab-3"
+          class="is-hidden"
+        >
+          <img
+            class=""
+            src="./photos/banner01.png"
+            alt="change the way you look, feel, and age"
+          />
+        </div>
+      </div>
+
       <!-- BELOW IS A FUNCTIONAL carousel with next and previous buttons -->
       <!-- <section aria-label="">
 				<h1>CHANGE THE WAY <br />YOU LOOK, FEEL, AND AGE</h1>
@@ -305,32 +459,43 @@
 				</div>
 			</section> -->
 
-      <section class="mb-5 grid grid-flow-col grid-rows-1">
-        <span
-          ><img src="./photos/flavors.png" alt="flavors" /><button>
+      <section class="mb-5 grid grid-flow-col grid-rows-1 gap-x-[30px] w-4/5">
+        <span class="border-b-4 w-fit p-3 bg-white flex flex-col">
+          <img src="./photos/flavors.png" alt="flavors" />
+          <button class="bg-[#45aa42] text-white text-small p-2">
             SHOP NOW
-          </button></span
-        >
-        <span
-          ><img src="./photos/health.png" alt="health" /><button>
+            <i class="fa fa-chevron-right fa-md" aria-hidden="true"></i>
+          </button>
+        </span>
+
+        <span class="border-b-4 w-fit p-3 bg-white flex flex-col">
+          <img src="./photos/health.png" alt="health" />
+          <button class="bg-[#45aa42] text-white text-small p-2">
             LEARN MORE
-          </button></span
-        >
-        <span
-          ><img src="./photos/visit.png" alt="visit" /><button>
+            <i class="fa fa-chevron-right fa-md" aria-hidden="true"></i>
+          </button>
+        </span>
+
+        <span class="border-b-4 w-fit p-3 bg-white flex flex-col">
+          <img src="./photos/visit.png" alt="visit" />
+
+          <button class="bg-[#45aa42] text-white text-small p-2">
             VISIT US
-          </button></span
-        >
+            <i class="fa fa-chevron-right fa-md" aria-hidden="true"></i>
+          </button>
+        </span>
       </section>
 
-      <article class="grid grid-cols-4 py-4 mb-5 rounded-md bg-textLightColor">
+      <article
+        class="grid grid-cols-4 p-4 mb-5 font-['Open_Sans_Light'] font-normal bg-white border-b-4 w-4/5"
+      >
         <header class="col-span-3">
-          <h2 class="text-2xl text-primaryColor">GREEN TEA</h2>
-          <h3 class="text-[1.17em] pb-[10px]">
+          <h2 class="text-4xl text-[#45aa42] pb-2">GREEN TEA</h2>
+          <h3 class="text-3xl text-[#00713d] pb-[10px]">
             THE ONE. THE ONLY. GREEN TEA HP™
           </h3>
-          <p>A LOVE STORY</p>
-          <p class="text-[small] leading-[15px]" id="join">
+          <p class="mb-3 font-semibold">A LOVE STORY</p>
+          <p class="mb-6" id="join">
             Formulated with a proprietary blend of pure and highly concentrated
             EGCG*-rich green tea extract, key nutrients, trace minerals, and an
             anti-aging antioxidant blend, Green Tea HP™ is simply the most
@@ -340,7 +505,10 @@
             cumulative benefits (way more than we can fit on our homepage, so
             explore our site!) only tell half the story.
           </p>
-          <button>LEARN MORE ></button>
+          <button class="bg-[#45aa42] text-white text-small p-2">
+            LEARN MORE
+            <i class="fa fa-chevron-right fa-md" aria-hidden="true"></i>
+          </button>
         </header>
         <!-- TODO: this image is responsive, it gets bigger when screen size reduce -->
         <img
