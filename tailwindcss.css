@@ -179,8 +179,8 @@ Show the link that contains should open and close the topnav (.icon) */
     /* font-family: "lucida grande", sans-serif; */
 }
 [role="tablist"] {
-    min-width: 550px;
-	@apply absolute bottom-[10%] left-[50%];
+    /* min-width: 550px; */
+	/* @apply absolute bottom-[15%] left-[50%]; */
 
 }
 
@@ -240,9 +240,9 @@ Show the link that contains should open and close the topnav (.icon) */
     border: 2px solid hsl(219deg 1% 72%);
     border-radius: 0 5px 5px;
     background: hsl(220deg 43% 99%); */
-    min-height: 10em;
+    /* min-height: 10em;
     min-width: 550px;
-    overflow: auto;
+    overflow: auto; */
 }
 [role="tabpanel"].is-hidden {
     display: none;

@@ -260,7 +260,7 @@
 
     <main class="w-[88%] font-[550] flex flex-col items-center">
       <!-- BELOW IS A FUNCTIONAL carousel with indicator button with no accesiblity -->
-      <section class="carouseel">
+      <!-- <section class="carouseel">
         <ul>
           <li class="carouseel__item carouseel__item--selected">
             <figure>
@@ -303,14 +303,23 @@
             />
           </li>
         </ul>
-      </section>
+      </section> -->
 
-      <!-- Copy pasta example from WAI to learn about carousel requirement:
+      <!-- Inspire by example from WAI to learn about carousel requirement:
       if tab elements are used for slide picker controls, 
       they implement the keyboard interaction defined in the Tabs Pattern -->
 
-      <div class="tabs relative w-fit m-auto mb-5 border-b-4 p-4 bg-white">
-        <div role="tablist" aria-labelledby="tablist-1" class="automatic">
+      <div
+        class="tabs relative w-fit m-auto mb-5 border-b-4 p-4 bg-white flex flex-row-reverse items-end"
+      >
+        <!-- <div class="tabs relative w-fit m-auto mb-5 border-b-4 p-4 bg-white"> -->
+        <!-- update left and other attribute to get the tablist into center because left 50 start in the middle -->
+        <!-- the transform class is add to pull the element back half of its height and width -->
+        <div
+          role="tablist"
+          aria-labelledby="tablist-1"
+          class="automatic absolute bottom-[5%] left-[50%] -translate-x-1/2 -translate-y-1/2"
+        >
           <button
             class=""
             id="tab-1"
@@ -318,9 +327,7 @@
             role="tab"
             aria-selected="true"
             aria-controls="tabpanel-1"
-          >
-            <!-- <span class="focus"> Maria Ahlefeldt </span> -->
-          </button>
+          ></button>
           <button
             class=""
             id="tab-2"
@@ -329,9 +336,7 @@
             aria-selected="false"
             aria-controls="tabpanel-2"
             tabindex="-1"
-          >
-            <!-- <span class="focus"> Carl Andersen </span> -->
-          </button>
+          ></button>
           <button
             class=""
             id="tab-3"
@@ -340,66 +345,26 @@
             aria-selected="false"
             aria-controls="tabpanel-3"
             tabindex="-1"
-          >
-            <!-- <span class="focus"> Ida da Fonseca </span> -->
-          </button>
+          ></button>
         </div>
         <div
-          class=""
+          class="bg-[url('./photos/banner01.png')] h-[360px] w-[1070px] flex flex-col justify-between pl-5 pb-5"
           id="tabpanel-1"
           role="tabpanel"
           tabindex="0"
           aria-labelledby="tab-1"
         >
-          <figure class="">
-            <img
-              class=""
-              src="./photos/banner01.png"
-              alt="change the way you look, feel, and age"
-            />
-
-            <!-- Setting the title and button to match with the image -->
-            <!-- So we can remove aboslute position and top, left
-            Could still use absolute but could move it to another component
-            -->
-
-            <!-- 
-              Tried moviving button inside figcaption, remove all absolute positions from 
-              figcaption and button, setting absolute top-0 left-0 to div parent element of
-              figure class --- This make image smaller and position of tablist showing inline
-              instead of on top image
-
-              tired moviving button inside figcaption, remove all absolute positions from 
-              figcaption and button, SETTING img with relative position. then setting 
-              absolute position to figcaption --- This make tablist to be underneath and not 
-              on top of image (I must have create a stacking context somehow) + location of 
-              title and button need more edit without much success from flex styles 
-              apply on figcaption
-
-              parent div: bg as image. Make parent div desire height of the image
-              div (max wid flex flex-col) when flex-col
-                figcaption
-                button
-            -->
-            <figcaption
-              class="absolute top-[15%] left-[3.7%] font-['Open_Sans_Light'] font-normal"
-            >
-              <!-- there should only be 1 h1 for the entire html -->
-              <h1 class="text-4xl text-[#00713d] pb-3">CHANGE THE WAY</h1>
-              <h1 class="text-4xl text-[#45aa42] pb-2">
-                YOU LOOK, FEEL, AND AGE.
-              </h1>
-              <p class="text-xl text-gray-500">
-                Increase engergy, look refreshed and feel rejuvenated*.
-              </p>
-            </figcaption>
-            <button
-              class="absolute bottom-[10%] left-[3.7%] bg-[#45aa42] text-white text-small p-2"
-            >
-              TAKE THE 7-DAY CHALLENGE
-              <i class="fa fa-chevron-right fa-md" aria-hidden="true"></i>
-            </button>
-          </figure>
+          <span class="font-['Open_Sans_Light'] font-normal basis-4/5">
+            <p class="text-4xl text-[#00713d] pb-3">CHANGE THE WAY</p>
+            <p class="text-4xl text-[#45aa42] pb-2">YOU LOOK, FEEL, AND AGE.</p>
+            <p class="text-xl text-gray-500">
+              Increase engergy, look refreshed and feel rejuvenated*.
+            </p>
+          </span>
+          <button class="bg-[#45aa42] text-white text-small p-2 self-start">
+            TAKE THE 7-DAY CHALLENGE
+            <i class="fa fa-chevron-right fa-md" aria-hidden="true"></i>
+          </button>
         </div>
         <div
           id="tabpanel-2"
@@ -459,7 +424,7 @@
 				</div>
 			</section> -->
 
-      <section class="mb-5 grid grid-flow-col grid-rows-1 gap-x-[30px] w-4/5">
+      <section class="mb-5 flex gap-x-[30px] w-[1102px]">
         <span class="border-b-4 w-fit p-3 bg-white flex flex-col">
           <img src="./photos/flavors.png" alt="flavors" />
           <button class="bg-[#45aa42] text-white text-small p-2">
@@ -487,7 +452,7 @@
       </section>
 
       <article
-        class="grid grid-cols-4 p-4 mb-5 font-['Open_Sans_Light'] font-normal bg-white border-b-4 w-4/5"
+        class="grid grid-cols-4 p-4 mb-5 font-normal bg-white border-b-4 w-[1102px]"
       >
         <header class="col-span-3">
           <h2 class="text-4xl text-[#45aa42] pb-2">GREEN TEA</h2>
@@ -519,181 +484,95 @@
       </article>
     </main>
 
-    <footer class="w-4/5 font-[550]">
-      <section class="flex mb-5">
-        <aside class="w-5/6">
-          <h2 class="text-2xl text-primaryColor">1 of 4 columns</h2>
-          <ul class="grid grid-flow-col grid-rows-6">
-            <li
-              class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
-            >
-              HTML5 Doctor
-            </li>
-            <li
-              class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
-            >
-              W3C
-            </li>
-            <li
-              class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
-            >
-              HTML5 Doctor
-            </li>
-            <li
-              class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
-            >
-              W3C
-            </li>
-            <li
-              class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
-            >
-              HTML5 Doctor
-            </li>
-            <li
-              class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
-            >
-              W3C
-            </li>
-            <li
-              class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
-            >
-              HTML5 Spec (working draft)
-            </li>
-            <li
-              class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
-            >
-              wordpress
-            </li>
-            <li
-              class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
-            >
-              HTML5 Spec (working draft)
-            </li>
-            <li
-              class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
-            >
-              wordpress
-            </li>
-            <li
-              class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
-            >
-              HTML5 Spec (working draft)
-            </li>
-            <li
-              class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
-            >
-              wordpress
-            </li>
-            <li
-              class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
-            >
-              Coding Online
-            </li>
-            <li
-              class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
-            >
-              Wikipedia
-            </li>
-            <li
-              class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
-            >
-              Coding Online
-            </li>
-            <li
-              class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
-            >
-              Wikipedia
-            </li>
-            <li
-              class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
-            >
-              Coding Online
-            </li>
-            <li
-              class="py-[3px] mr-5 border-b-[1px] text-[small] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
-            >
-              Wikipedia
-            </li>
-          </ul>
-        </aside>
-
-        <aside class="w-1/6">
-          <h2 class="text-2xl text-primaryColor">1 of 4 columns</h2>
-          <ul>
-            <!-- update span into li elements Feb 2-->
-            <li
-              class="flex gap-2 py-[3px] text-[small] border-b-[1px] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
-            >
-              <img src="" alt="social-delicous" class="w-[15px] h-[15px]" />
-              <p>delicious</p>
-            </li>
-
-            <li
-              class="flex gap-2 py-[3px] text-[small] border-b-[1px] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
-            >
-              <img src="" alt="social-digg" class="w-[15px] h-[15px]" />
-              <p>digg</p>
-            </li>
-
-            <li
-              class="flex gap-2 py-[3px] text-[small] border-b-[1px] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
-            >
-              <img src="" alt="social-facebook" class="w-[15px] h-[15px]" />
-              <p>facebook</p>
-            </li>
-
-            <li
-              class="flex gap-2 py-[3px] text-[small] border-b-[1px] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
-            >
-              <img src="" alt="social-last.fm" class="w-[15px] h-[15px]" />
-              <p>last.fm</p>
-            </li>
-
-            <li
-              class="flex gap-2 py-[3px] text-[small] border-b-[1px] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
-            >
-              <img src="" alt="social-rss" class="w-[15px] h-[15px]" />
-              <p>rss</p>
-            </li>
-
-            <li
-              class="flex gap-2 py-[3px] text-[small] border-b-[1px] border-pink-400/25 hover:bg-primaryColor hover:text-textLightColor"
-            >
-              <img src="" alt="social-twitter" class="w-[15px] h-[15px]" />
-              <p>twitter</p>
-            </li>
-          </ul>
-        </aside>
+    <footer class="w-full">
+      <section class="bg-[#028046] py-5 text-sm text-white">
+        <div class="flex w-[70%] m-auto">
+          <aside class="w-1/5">
+            <h2 class="font-medium mb-4">COMPANY</h2>
+            <ul>
+              <li>
+                <a href="">About GREENX</a>
+              </li>
+              <li>
+                <a href="">About Green Tea HP <small>TM</small></a>
+              </li>
+              <li class="flex gap-2">
+                <a href="#" class="fa fa-youtube-play fa-lg"></a>
+                <a href="#" class="fa fa-brands fa-twitter fa-lg"></a>
+                <a href="#" class="fa fa-brands fa-facebook-f fa-lg"></a>
+              </li>
+            </ul>
+          </aside>
+          <aside class="w-1/5">
+            <h2 class="font-medium mb-4">CUSTOMER SUPPORT</h2>
+            <ul>
+              <li><a href="">Contact US</a></li>
+              <li><a href="">FAQ's</a></li>
+            </ul>
+          </aside>
+          <aside class="w-1/5">
+            <h2 class="font-medium mb-4">BECOME A RESELLER</h2>
+            <ul>
+              <li><a href="">Become an Affiliate</a></li>
+            </ul>
+          </aside>
+          <aside class="w-1/5">
+            <h2 class="font-medium mb-4">1 MILLION STORIES</h2>
+            <ul>
+              <li><a href="">Share Your Story</a></li>
+            </ul>
+          </aside>
+          <aside class="w-1/5">
+            <h2 class="font-medium mb-4">ABOUT ME</h2>
+            <ul>
+              <!-- update span into li elements Feb 2-->
+              <li class="flex gap-2 items-center">
+                <a href="#" class="fa fa-user"></a>
+                <p>GreenTeaHP</p>
+              </li>
+              <li class="flex gap-2 items-center">
+                <a href="#" class="fa fa-phone"></a>
+                <p>(866) 523-5984</p>
+              </li>
+              <li class="flex gap-2 items-center">
+                <a href="#" class="fa fa-print"></a>
+                <p>(801) 768-9561</p>
+              </li>
+              <li class="flex gap-2 items-center">
+                <a href="#" class="fa fa-envelope"></a>
+                <p>customerservice@grenx.com</p>
+              </li>
+            </ul>
+          </aside>
+        </div>
       </section>
 
-      <section class="flex justify-around p-5 mb-5 rounded bg-textLightColor">
-        <header class="basis-1/3">
-          <h2 class="text-2xl text-primaryColor">
-            <a class="hover:text-textLightColor hover:bg-primaryColor" href=""
-              >Copy Right section
-            </a>
-          </h2>
-          <p class="text-[small]">Amazing Work</p>
-        </header>
-        <img class="w-[50px] h-[50px] mr-5" src="" alt="footer-image" />
-        <p class="text-[small] self-center basis-2/3 leading-[14px]">
-          Coding Online is a website and blog that offers resources and advice
-          to web developers and designer. It could be founded by you because it
-          doesn't exist today.
-        </p>
+      <section class="bg-[#00713d] text-white h-48 flex justify-center pt-7">
+        <div class="w-[70%] flex flex-col gap-y-7">
+          <div class="flex gap-x-1 self-end">
+            <a href="#"
+              ><img src="/photos/amex.png" alt="american express"
+            /></a>
+            <a href="#"><img src="/photos/disc.png" alt="discovery" /></a>
+            <a href="#"><img src="/photos/mc.png" alt="master card" /></a>
+            <a href="#"><img src="/photos/visa.png" alt="visa" /></a>
+          </div>
+          <p class="font-medium self-center">
+            Official Site of: GreenTeaHP Phone: (866) 523-5984
+          </p>
+          <div class="flex self-center gap-x-1">
+            <p>©2023 GRENX, All Rights Reserved</p>
+            <p>&#124;</p>
+            <a href="#">Privacy Policy</a>
+            <p>&#124;</p>
+            <a href="#">Contact Us</a>
+            <p>&#124;</p>
+            <p href="#">Ads disabled</p>
+            <p>&#124;</p>
+            <a href="#"> FDA Disclaimer</a>
+          </div>
+        </div>
       </section>
-
-      <aside class="flex justify-end text-sm">
-        <time class="pr-2">2005-2009</time>
-        <a
-          class="underline text-primaryColor hover:bg-primaryColor hover:text-textLightColor"
-          href=""
-          >Coding Online</a
-        >
-        <span>.</span>
-        <!-- re-evaluate p tag above -->
-        <!-- change p tag into a tag Feb 2 -->
-      </aside>
     </footer>
     <!-- </div> -->
   </body>
